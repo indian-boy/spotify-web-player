@@ -10,4 +10,4 @@ function createMarkup(data) {
 export default function renderAlbumInfo(data, element) {
   const markup = createMarkup(data);
   element.innerHTML = markup;
-};
+}
