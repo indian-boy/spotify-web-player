@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { expect } from 'chai';
 import { it, describe } from 'mocha';
 import 'jsdom-global/register';
@@ -39,10 +40,14 @@ describe('AlbumInfo', () => {
   `;
 
   it('should create and append the markup given a correct data', () => {
-    // eslint-disable-next-line no-undef
     const element = document.createElement('div');
     renderAlbumInfo(data, element);
 
     expect(element.innerHTML).to.be.eql(markup);
+  });
+
+  it('should return the data', () => {
+    const element2 = document.createElement('div');
+    expect(renderAlbumInfo(data, element2)).to.be.eql(data);
   });
 });
