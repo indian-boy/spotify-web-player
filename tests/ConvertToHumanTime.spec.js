@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { it, describe } from 'mocha';
 
-import convertToHumanTime from '../src/ConvertToHumanTime';
+import convertToHumanTime from '../src/convertToHumanTime';
 
 describe('ConvertToHumanTime', () => {
   // 0ms === 0:00

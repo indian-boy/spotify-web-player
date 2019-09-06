@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { it, describe } from 'mocha';
 
-import spotify from '../src/Spotify';
+import spotify from '../src/spotify';
 
 describe('Spotify', () => {
   it('should be an object', () => expect(spotify).to.be.an.object);

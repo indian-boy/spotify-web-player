@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { expect } from 'chai';
 import { it, describe } from 'mocha';
 import 'jsdom-global/register';
@@ -80,32 +81,31 @@ describe('AlbumList', () => {
   ];
 
   const markup = `
-    <div class="list-item">
-      <img src="${data[0].images[2].url}" alt="${data[0].name}" class="list-image">
-      <div class="list-description">
-        <p class="list-title">${data[0].name}</p>
-        <p class="list-subtitle">${data[0].artists[0].name}</p>
+    <div class="list-item" data-album-id="${data[0].id}">
+      <img src="${data[0].images[2].url}" alt="${data[0].name}" class="list-image" data-album-id="${data[0].id}">
+      <div class="list-description" data-album-id="${data[0].id}">
+        <p class="list-title" data-album-id="${data[0].id}">${data[0].name}</p>
+        <p class="list-subtitle" data-album-id="${data[0].id}">${data[0].artists[0].name}</p>
       </div>
     </div>`;
 
   const markup2 = `
-    <div class="list-item">
-      <img src="${data[0].images[2].url}" alt="${data[0].name}" class="list-image">
-      <div class="list-description">
-        <p class="list-title">${data[0].name}</p>
-        <p class="list-subtitle">${data[0].artists[0].name}</p>
+    <div class="list-item" data-album-id="${data[0].id}">
+      <img src="${data[0].images[2].url}" alt="${data[0].name}" class="list-image" data-album-id="${data[0].id}">
+      <div class="list-description" data-album-id="${data[0].id}">
+        <p class="list-title" data-album-id="${data[0].id}">${data[0].name}</p>
+        <p class="list-subtitle" data-album-id="${data[0].id}">${data[0].artists[0].name}</p>
       </div>
     </div>
-    <div class="list-item">
-      <img src="${data[0].images[2].url}" alt="${data[0].name}" class="list-image">
-      <div class="list-description">
-        <p class="list-title">${data[0].name}</p>
-        <p class="list-subtitle">${data[0].artists[0].name}</p>
+    <div class="list-item" data-album-id="${data[0].id}">
+      <img src="${data[0].images[2].url}" alt="${data[0].name}" class="list-image" data-album-id="${data[0].id}">
+      <div class="list-description" data-album-id="${data[0].id}">
+        <p class="list-title" data-album-id="${data[0].id}">${data[0].name}</p>
+        <p class="list-subtitle" data-album-id="${data[0].id}">${data[0].artists[0].name}</p>
       </div>
     </div>`;
 
   it('should create and append the markup given a correct data', () => {
-    // eslint-disable-next-line no-undef
     const element = document.createElement('div');
     renderAlbums(data, element);
 
@@ -113,7 +113,6 @@ describe('AlbumList', () => {
   });
 
   it('should create and append when more than 1 album', () => {
-    // eslint-disable-next-line no-undef
     const element2 = document.createElement('div');
     renderAlbums(data2, element2);
 

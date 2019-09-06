@@ -4,7 +4,7 @@ import { it, describe } from 'mocha';
 import 'jsdom-global/register';
 
 import renderAlbumTracks from '../src/albumsTracks';
-import convertToHumanTime from '../src/ConvertToHumanTime';
+import convertToHumanTime from '../src/convertToHumanTime';
 
 describe('AlbumTracks', () => {
   const data = [

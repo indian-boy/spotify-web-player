@@ -1,4 +1,4 @@
-import convertToHumanTime from './ConvertToHumanTime';
+import convertToHumanTime from './convertToHumanTime';
 
 function createMarkup(tracks) {
   return tracks.map(track => `
