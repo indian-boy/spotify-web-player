@@ -36,7 +36,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-| ![Erik Henrique](https://avatars2.githubusercontent.com/u/3991845?v=3&s=150)|
+| ![Erik Henrique](https://avatars2.githubusercontent.com/u/27955793?s=400&u=2dd387988f7f95fabecf167becc6de819bf8e40b&v=4)|
 |:---------------------:|
 |  [Erik Henrique](https://github.com/erikhenriq/)   |
 
