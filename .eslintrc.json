@@ -1,7 +1,14 @@
 {
-    "extends": "airbnb-base",
+    "extends": "airbnb",
     "plugins": [
         "import"
     ],
-    "rules": {"no-param-reassign": [2, {"props": false}]}
+    "rules": {
+      "no-param-reassign": [
+        2, 
+        {"props": false}
+      ], 
+      "import/no-extraneous-dependencies": [
+        "error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}
+      ]}
 }
